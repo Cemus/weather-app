@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+:root {
+  --error-message: "error";
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url(../images/background.jpg);
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.language {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+}
+
+.drapeau {
+  max-height: 10vh;
+  max-width: 10vh;
+  border-radius: 1.5rem;
+  padding: 1rem;
+}
+.drapeau:hover {
+  cursor: pointer;
+}
+
+.input-wrapper {
+  margin: 1%;
+  text-align: center;
+  position: relative;
+}
+.input-wrapper.error::after {
+  content: attr(data-content);
+  position: absolute;
+  bottom: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: red;
+  width: 100%;
+}
+
+input[type=text] {
+  opacity: 0.9;
+  color: black;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border-style: none;
+}
+input[type=text]:focus {
+  outline: none;
+}
+input[type=text]:focus::placeholder {
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+input[type=text].error {
+  border: solid red 2px;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  font-family: "Lato", sans-serif;
+  min-height: 85vh;
+}
+
+.icon {
+  min-height: 128px;
+}
+
+.informations {
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+}
+
+/*# sourceMappingURL=style.css.map */
