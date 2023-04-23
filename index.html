@@ -11,22 +11,37 @@
   </head>
   <body>
     <header>
-        <div class="language">
-          <img id="french" class="drapeau" src="images/france.png" alt="français">
-          <img id="english" class="drapeau" src="images/ru.png" alt="english">
-        </div>
-        <div class="input-wrapper" data-content="hi"><input type="text" name="search" id="search" placeholder="Search location"></div>
+      <div class="language">
+        <img
+          id="french"
+          class="drapeau"
+          src="images/france.png"
+          alt="français"
+        />
+        <img id="english" class="drapeau" src="images/ru.png" alt="english" />
+      </div>
+      <div class="input-wrapper" data-content="error">
+        <input
+          type="text"
+          name="search"
+          id="search"
+          placeholder="Search location"
+        />
+      </div>
     </header>
     <div id="container">
-        <img class="icon" src="" alt="">
-      <h2 id="ville"></h3>
-      <h3 id="temperature"></h4>
-      <h4 id="description"></h4>
+      <div id="svg"></div>
+      <h2 id="ville"></h2>
+      <div class="left-right-container">
+        <h3 id="temperature"></h3>
+        <div class="border"></div>
         <div class="informations">
-            <p id="ressenti"></p>
-            <p id="humidite"></p>
-            <p id="vent"></p>
+          <p id="ressenti"></p>
+          <p id="humidite"></p>
+          <p id="vent"></p>
         </div>
+      </div>
+      <h4 id="description"></h4>
     </div>
   </body>
 </html>

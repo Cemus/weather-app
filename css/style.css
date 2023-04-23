@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 :root {
   --error-message: "error";
@@ -6,7 +7,8 @@
 body {
   padding: 0;
   margin: 0;
-  background-image: url(../images/background.jpg);
+  background: linear-gradient(-0.4turn, #0c071b, #09090a, #000000);
+  height: 100vh;
 }
 
 header {
@@ -79,14 +81,56 @@ input[type=text].error {
   min-height: 85vh;
 }
 
-.icon {
-  min-height: 128px;
+.left-right-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4vw;
+}
+
+#temperature {
+  position: relative;
+  margin: 0;
+  font-size: 8rem;
+}
+#temperature::after {
+  content: "°C";
+  position: relative;
+  color: white;
+  width: inherit;
+  bottom: 70px;
+  font-size: 2rem;
+}
+
+.border {
+  height: 16vh;
+  background-color: white;
+  border: solid 1px;
 }
 
 .informations {
   display: flex;
-  flex-direction: row;
-  gap: 2vw;
+  flex-direction: column;
+  font-size: 1.5rem;
+}
+
+#ressenti::after {
+  content: "°C";
+  position: relative;
+  color: white;
+  width: inherit;
+  bottom: 6px;
+  font-size: 1rem;
+}
+
+.icon {
+  min-height: 128px;
+}
+
+.svg {
+  width: 4vw;
+  height: 10vh;
+  fill: white;
 }
 
 /*# sourceMappingURL=style.css.map */
